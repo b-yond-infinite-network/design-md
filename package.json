@@ -1,0 +1,14 @@
+{
+  "name": "byond-design-md",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DESIGN.md visual-identity specs for the B-Yond family of brands (B-Yond, Agility, Telco) and Audela.",
+  "scripts": {
+    "lint": "find companies -type f -name 'DESIGN*.md' -print0 | xargs -0 -n1 -I{} sh -c 'echo \"\\n== {} ==\" && npx --yes @google/design.md lint \"{}\"'",
+    "lint:byond": "npx --yes @google/design.md lint companies/byond/DESIGN.md",
+    "spec": "npx --yes @google/design.md spec"
+  },
+  "devDependencies": {
+    "@google/design.md": "*"
+  }
+}

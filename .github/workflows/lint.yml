@@ -1,0 +1,23 @@
+name: lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  design-md-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Lint all DESIGN.md files
+        run: |
+          fail=0
+          while IFS= read -r -d '' f; do
+            echo "== $f =="
+            npx --yes @google/design.md lint "$f" || fail=1
+          done < <(find companies -type f -name 'DESIGN*.md' -print0)
+          exit $fail
