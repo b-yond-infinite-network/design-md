@@ -1,0 +1,18 @@
+companies/byond/README.md
+  h_99bc779cc2056c 9
+README.md
+  h_99bc779cc2056c 14
+package.json
+  h_99bc779cc2056c 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "d74c9542778978b8aaaed41053ffa15e262c1ce4",
+  "prompts": {},
+  "humans": {
+    "h_99bc779cc2056c": {
+      "author": "dipesh"
+    }
+  }
+}
